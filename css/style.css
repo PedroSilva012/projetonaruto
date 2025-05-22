@@ -1,0 +1,298 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Cabeçalho === */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+}
+.itens a {
+  margin: 20px;
+}
+.itens a:hover {
+  background: #f0f0f0;
+}
+
+/* Links do menu */
+.links a {
+  font: 3rem "League Spartan", sans-serif;
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+}
+.links i {
+  font-size: 1rem;
+  color: #000;
+}
+.links a:hover,
+.links a:hover i {
+  color: #ee9003;
+  transition: 0.2s ease-in-out;
+}
+
+/* Redes sociais */
+.itens-redes a {
+  font: 2rem "Bebas Neue", sans-serif;
+  color: #000;
+  padding: 20px;
+}
+.itens-redes a:hover {
+  color: #ee9003;
+  transition: 0.2s ease-in-out;
+}
+
+/* === Seção Sobre === */
+.sobre {
+  background: #ee9003;
+}
+.sobre h1 {
+  font: 3rem "Bebas Neue", sans-serif;
+  color: #fff;
+  padding: 20px;
+}
+.sobre p {
+  font: 2rem "Bebas Neue", sans-serif;
+  color: #000;
+  padding: 20px;
+}
+.sobre img,
+.sobre .img2,
+.sobre .img3 {
+  width: 100%;
+  height: 100%;
+}
+.sobre img {
+  border-radius: 0 0 20px 20px;
+}
+.sobre .img2 {
+  border-radius: 20px;
+}
+.sobre .img3 {
+  border-radius: 20px 20px 0 0;
+}
+
+/* Rodapé */
+.rodape {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  font-family: "Bebas Neue", sans-serif;
+}
+.rodape p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* === Cards de personagens === */
+.cabecalho {
+  display: flex;
+  justify-content: center;
+}
+.meu-card {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  transition: opacity 0.5s ease;
+}
+.meu-card h2 {
+  font-size: 3rem;
+}
+.meu-card p {
+  font-size: 1.5rem;
+}
+
+.card-personagem {
+  width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  border: 2px solid #000;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card-personagem:hover {
+  transform: scale(1.05);
+}
+.card-personagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Efeitos de texto */
+.texto-n:hover { color: #ee9003; }
+.texto-k:hover { color: #2309bb; }
+.texto-s:hover { color: #5d03ee; }
+.texto-sk:hover { color: #ee03a0; }
+.texto-m:hover { color: #d1ce1e; }
+
+/* === Timeline === */
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 4px;
+  background: #e6a50c;
+  transform: translateX(-50%);
+}
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+.timeline-item .content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.timeline-item.left .content {
+  flex-direction: row-reverse;
+}
+.timeline-item img {
+  width: 120px;
+  height: auto;
+  border-radius: 4px;
+}
+.timeline-item .text {
+  max-width: 300px;
+}
+.content .img-jogo {
+  width: 50%;
+  height: 100%;
+}
+
+/* Botão com fade */
+button#trocarBtn {
+  margin: 70px auto 10px;
+  padding: 6px 20px;
+  font: 1.2rem "Bebas Neue", sans-serif;
+  background: #000;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: block;
+}
+button#trocarBtn:hover {
+  background: #e6a50c;
+  border-color: rgba(151, 65, 252, 0.2);
+}
+
+/* Efeitos visuais */
+.fade-out { opacity: 0; }
+.fade-in { opacity: 1; }
+
+/* QR code */
+.qr-code {
+  width: 20%;
+  height: 50%;
+  border-radius: 20px 20px 0 0;
+}
+
+/* === Media Queries (responsividade) === */
+@media (max-width: 1024px) {
+  .card-personagem {
+    width: 320px;
+    height: 240px;
+  }
+  .meu-card h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .links a {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  .itens-redes {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .itens img {
+    height: 60px;
+  }
+
+  .sobre h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .sobre p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .timeline::before {
+    left: 8px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding: 0 10px 20px 30px;
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+  .timeline-item.left .content,
+  .timeline-item.right .content {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-personagem {
+    width: 90%;
+    height: auto;
+  }
+  .card-personagem img {
+    height: auto;
+  }
+  .meu-card h2 {
+    font-size: 2rem;
+  }
+  .meu-card p {
+    font-size: 1rem;
+  }
+}
